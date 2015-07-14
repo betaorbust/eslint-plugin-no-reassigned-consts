@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-no-reassigned-consts",
+  "description": "EsLint rule to disallow reassigning constants",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests",
+    "docs": "docs"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/betaorbust/eslint-plugin-no-reassigned-consts"
+  },
+  "author": "Jacques Favreau",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^0.18.0",
+    "eslint-tester": "^0.6.0",
+    "mocha": "^2.2.1"
+  },
+  "dependencies": {}
+}
