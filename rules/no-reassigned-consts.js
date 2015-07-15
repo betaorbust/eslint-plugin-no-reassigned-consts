@@ -106,7 +106,6 @@ function noExternalWriteableVariables(context) {
                         context.report(ref.identifier, "{{name}} is a constant and should not be reassigned.", {name: name});
                     });
                 }
-                console.log(variable.name, variable.writeable);
             });
         }
         scope.childScopes.forEach(checkScope);
