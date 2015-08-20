@@ -12,7 +12,14 @@ function noExternalWriteableVariables(context) {
     //--------------------------------------------------------------------------
     // Helpers
     // --------------------------------------------------------------------------
-    var constNameRegex = /^[A-Z0-9_]+$/;
+    var constNameRegex = context.options[1]; // Can be a string, not set, or a boolean false
+    if(typeof constNameRegex === 'string'){
+        constNameRegex = new RegExp(context.options[1]);
+    } else if(constNameRegex !== false){
+        constNameRegex = /^[A-Z0-9_]+$/;
+    } else{
+        constNameRegex = false;
+    }
 
     /**
      * Assigns references to corresponding variable
@@ -75,7 +82,7 @@ function noExternalWriteableVariables(context) {
      * @returns {boolean}         True if variable is a constant value.
      */
     function isConst(name, varDef) {
-        return varDef.kind === "const" || constNameRegex.test(name);
+        return varDef.kind === "const" || constNameRegex && constNameRegex.test(name);
     }
 
 
@@ -131,6 +138,12 @@ function noExternalWriteableVariables(context) {
 
 module.exports = noExternalWriteableVariables;
 
-module.exports.schema = [
-    // JSON Schema for rule options goes here
-];
+module.exports.schema = [{
+    "type": "object",
+    "properties": {
+        "constNameMatch": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}];
