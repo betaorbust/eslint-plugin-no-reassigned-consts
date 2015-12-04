@@ -3,7 +3,7 @@
      rules: {
          'no-reassigned-consts': require('./rules/no-reassigned-consts')
      },
-     rulseConfig: {
+     rulesConfig: {
          'no-reassigned-consts': [2, {'constNameMatch': '^[A-Z0-9_]+$'}]
      }
  };
