@@ -21,9 +21,8 @@
   "author": "Jacques Favreau",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^0.18.0",
-    "eslint-tester": "^0.6.0",
-    "mocha": "^2.2.1"
+    "eslint": "^3.2.2",
+    "mocha": "^3.0.2"
   },
   "dependencies": {}
 }
