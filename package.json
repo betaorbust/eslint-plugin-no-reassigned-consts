@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-no-reassigned-consts",
   "description": "EsLint rule to disallow reassigning constants",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "directories": {
     "test": "tests",
