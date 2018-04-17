@@ -1,7 +1,0 @@
-## Remove everything
-*
-**/*
-
-## Whitelist our rules file along with our entry index.
-!rules/**/*
-!index.js
